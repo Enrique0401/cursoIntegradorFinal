@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c41b6d68-3ad2-4076-a612-c2064481cb43" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Builder/ProyectoBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Repositorio/ProyectoRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Servicio/IProyectoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Servicio/ProyectoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Vistas/TablaProyectos.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Vistas/TablaProyectos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Vistas/TablaUsuario.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Vistas/TablaUsuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pantallas/PantallaDueno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pantallas/PantallaDueno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pantallas/PantallaSupervisor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pantallas/PantallaSupervisor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pantallas/PantallaSupervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pantallas/PantallaSupervisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Builder/ClienteBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Builder/ClienteBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Builder/DuenoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Builder/DuenoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/Contacto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Contacto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Model/Dueno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Model/Dueno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Observer/EntidadObservable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Observer/EntidadObservable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Observer/EntidadObservableSingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Observer/EntidadObservableSingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/NewLogin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaDueno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pantallas/PantallaSupervisor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repositorio/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repositorio/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repositorio/ClienteRepositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repositorio/ClienteRepositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repositorio/ContactoRepositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repositorio/ContactoRepositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repositorio/DuenoRepositorio.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repositorio/DuenoRepositorio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servicio/ClienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Servicio/ClienteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Servicio/ContactoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Servicio/ContactoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ServiciosMoroniConexion/BaseDatosConexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ServiciosMoroniConexion/BaseDatosConexion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Util/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Util/Session.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaCliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaClienteAdmin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vistas/TablaComentarios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/gymnewbody/GymNewBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/gymnewbody/GymNewBody.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="35j8PCoObDm8yadqYaSEds0x8nI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/USUARIO/Desktop/GYMPOO"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c41b6d68-3ad2-4076-a612-c2064481cb43" name="Changes" comment="" />
+      <created>1763612093627</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763612093627</updated>
+    </task>
+    <servers />
+  </component>
+</project>
