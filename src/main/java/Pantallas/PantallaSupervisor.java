@@ -144,6 +144,7 @@ public class PantallaSupervisor extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
 
         botonActualizarDatos.setBackground(new java.awt.Color(195, 18, 1));
+        botonActualizarDatos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botonActualizarDatos.setForeground(new java.awt.Color(255, 255, 255));
         botonActualizarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizarDatos.png"))); // NOI18N
         botonActualizarDatos.setText("Incidencias");
