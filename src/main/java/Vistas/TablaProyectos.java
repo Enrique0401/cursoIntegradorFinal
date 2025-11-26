@@ -224,6 +224,7 @@ public class TablaProyectos extends javax.swing.JPanel implements Observador {
         jScrollPane1.setViewportView(tablaUsuario);
 
         comboClientes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos los clientes", "Item 2", "Item 3", "Item 4" }));
+        comboClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         comboClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboClientesActionPerformed(evt);
@@ -231,6 +232,7 @@ public class TablaProyectos extends javax.swing.JPanel implements Observador {
         });
 
         botonFiltrar.setText("Filtrar");
+        botonFiltrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonFiltrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonFiltrarActionPerformed(evt);
@@ -238,6 +240,7 @@ public class TablaProyectos extends javax.swing.JPanel implements Observador {
         });
 
         botonLimiar.setText("Limpiar");
+        botonLimiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonLimiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonLimiarActionPerformed(evt);
@@ -249,6 +252,7 @@ public class TablaProyectos extends javax.swing.JPanel implements Observador {
         jLabel2.setText("GESTION DE PROYECTOS");
 
         botonRegresar.setText("Regresar");
+        botonRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         botonRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonRegresarActionPerformed(evt);
@@ -424,7 +428,7 @@ public class TablaProyectos extends javax.swing.JPanel implements Observador {
     }//GEN-LAST:event_botonLimiarActionPerformed
 
     private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_botonRegresarActionPerformed
 
     private void comboClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboClientesActionPerformed

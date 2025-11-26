@@ -102,6 +102,7 @@ public class TablaUsuario extends javax.swing.JPanel implements Observador {
         btnVerTodos = new javax.swing.JButton();
         btnSeleccionar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        botonRegresar = new javax.swing.JButton();
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
         jLabel15.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
@@ -112,10 +113,11 @@ public class TablaUsuario extends javax.swing.JPanel implements Observador {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnVer.setBackground(new java.awt.Color(30, 45, 60));
+        btnVer.setBackground(new java.awt.Color(18, 60, 109));
         btnVer.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnVer.setForeground(new java.awt.Color(255, 255, 255));
         btnVer.setText("Ver");
+        btnVer.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerActionPerformed(evt);
@@ -141,20 +143,22 @@ public class TablaUsuario extends javax.swing.JPanel implements Observador {
         });
         jScrollPane1.setViewportView(tablaUsuario);
 
-        btnVerTodos.setBackground(new java.awt.Color(30, 45, 60));
+        btnVerTodos.setBackground(new java.awt.Color(18, 60, 109));
         btnVerTodos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnVerTodos.setForeground(new java.awt.Color(255, 255, 255));
         btnVerTodos.setText("Ver Todos");
+        btnVerTodos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnVerTodos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerTodosActionPerformed(evt);
             }
         });
 
-        btnSeleccionar.setBackground(new java.awt.Color(30, 45, 60));
+        btnSeleccionar.setBackground(new java.awt.Color(18, 60, 109));
         btnSeleccionar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSeleccionar.setForeground(new java.awt.Color(255, 255, 255));
         btnSeleccionar.setText("Seleccionar");
+        btnSeleccionar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSeleccionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSeleccionarActionPerformed(evt);
@@ -165,42 +169,50 @@ public class TablaUsuario extends javax.swing.JPanel implements Observador {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("TABLA DE CLIENTES");
 
+        botonRegresar.setText("Regresar");
+        botonRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRegresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(btnSeleccionar)
-                        .addGap(149, 149, 149)
-                        .addComponent(btnVer)
-                        .addGap(124, 124, 124)
-                        .addComponent(btnVerTodos)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(318, 318, 318)
                 .addComponent(jLabel1)
-                .addGap(253, 253, 253))
+                .addGap(126, 126, 126)
+                .addComponent(botonRegresar))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 785, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(btnSeleccionar)
+                .addGap(149, 149, 149)
+                .addComponent(btnVer)
+                .addGap(124, 124, 124)
+                .addComponent(btnVerTodos))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(botonRegresar)))
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSeleccionar)
                     .addComponent(btnVer)
-                    .addComponent(btnVerTodos))
-                .addGap(51, 51, 51))
+                    .addComponent(btnVerTodos)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -267,11 +279,16 @@ public class TablaUsuario extends javax.swing.JPanel implements Observador {
         txtTelefono.setText(tablaUsuario.getValueAt(fila, 5).toString());*/
     }//GEN-LAST:event_btnSeleccionarActionPerformed
 
+    private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_botonRegresarActionPerformed
+
     private boolean contrasenaVisible = false;
 
 //---------------------------Días del calendario--------------------------------  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonRegresar;
     private javax.swing.JButton btnSeleccionar;
     private javax.swing.JButton btnVer;
     private javax.swing.JButton btnVerTodos;
