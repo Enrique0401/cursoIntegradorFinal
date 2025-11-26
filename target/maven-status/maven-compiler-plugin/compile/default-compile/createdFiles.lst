@@ -6,6 +6,7 @@ Vistas\TablaProyectos.class
 Observer\Observable.class
 Servicio\ClienteService.class
 Vistas\TablaClienteAdmin$3.class
+Vistas\TablaIncidencias$3.class
 Vistas\TablaProyectos$5.class
 EditarProyecto\EditarCategoria$1.class
 Repositorio\ContactoRepositorio.class
@@ -94,6 +95,7 @@ Vistas\TablaCliente$5.class
 EditarProyecto\EditarProgreso$2.class
 Vistas\TablaCliente$3.class
 Pantallas\PantallaSupervisor$10.class
+Vistas\TablaIncidencias$2.class
 Vistas\TablaProyectos$6.class
 Repositorio\ClienteRepositorio.class
 Vistas\TablaSeguimientos$3.class
@@ -109,6 +111,7 @@ Vistas\TablaProyectos$7.class
 Model\Cliente.class
 Pantallas\PantallaAdmin$10.class
 EditarProyecto\EditarProgreso$3.class
+Vistas\TablaIncidencias$1.class
 Vistas\TablaClienteAdmin$5.class
 Pantallas\PantallaSupervisor$9.class
 Pantallas\PantallaDueno.class

@@ -462,27 +462,14 @@ public class PantallaSupervisor extends javax.swing.JFrame {
 
 
     private void botonActualizarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActualizarDatosActionPerformed
-        /* String email = cliente.getEmailCliente();
-        String contrasenaIngresada = JOptionPane.showInputDialog(
-                null,
-                "Por motivos de seguridad, vuelva a ingresar su contraseña:",
-                "Verificación de identidad",
-                JOptionPane.INFORMATION_MESSAGE
-        );
+        TablaIncidencias tablaIncid = new TablaIncidencias();
+        tablaIncid.setSize(797, 537);
+        tablaIncid.setLocation(0, 0);
 
-        if (contrasenaIngresada == null || contrasenaIngresada.trim().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Debe ingresar una contraseña válida.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        AuthService authService = new AuthService();
-        boolean esValido = authService.validarCredencialesCliente(email, contrasenaIngresada);
-
-        if (esValido) {
-            mostrarJPanelActualizarDatos();
-        } else {
-            JOptionPane.showMessageDialog(null, "Contraseña incorrecta.", "Acceso denegado", JOptionPane.ERROR_MESSAGE);
-        }*/
+        contenedor.removeAll();
+        contenedor.add(tablaIncid, BorderLayout.CENTER);
+        contenedor.revalidate();
+        contenedor.repaint();
     }//GEN-LAST:event_botonActualizarDatosActionPerformed
 
     private void botonActualizarDatosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonActualizarDatosMouseEntered

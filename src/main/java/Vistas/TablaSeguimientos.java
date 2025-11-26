@@ -210,6 +210,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
 
         jButton1.setBackground(new java.awt.Color(18, 60, 109));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Guardar seguimiento");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
