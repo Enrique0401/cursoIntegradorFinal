@@ -165,7 +165,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        guardarBtn = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaUsuario = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
@@ -208,14 +208,14 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setBackground(new java.awt.Color(18, 60, 109));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Guardar seguimiento");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        guardarBtn.setBackground(new java.awt.Color(18, 60, 109));
+        guardarBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        guardarBtn.setForeground(new java.awt.Color(255, 255, 255));
+        guardarBtn.setText("Guardar seguimiento");
+        guardarBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        guardarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                guardarBtnActionPerformed(evt);
             }
         });
 
@@ -297,7 +297,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
                         .addGap(6, 6, 6)
                         .addComponent(jLabel7))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(guardarBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
@@ -324,7 +324,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(guardarBtn)
                         .addGap(26, 26, 26)
                         .addComponent(jLabel6)
                         .addGap(9, 9, 9)
@@ -351,7 +351,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void guardarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarBtnActionPerformed
         try {
             // 1. OBTENER SELECCIÓN
             Object seleccionado = jComboBox1.getSelectedItem();
@@ -404,7 +404,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
         } catch (Exception e) {
             System.err.println("Error en botón guardar: " + e.getMessage()); // Muestra error en consola sin romper el programa
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_guardarBtnActionPerformed
 
     private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed
         this.setVisible(false);
@@ -417,7 +417,7 @@ public class TablaSeguimientos extends javax.swing.JPanel implements Observador 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonRegresar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton guardarBtn;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
