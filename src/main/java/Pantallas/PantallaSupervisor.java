@@ -16,7 +16,9 @@ public class PantallaSupervisor extends javax.swing.JFrame {
      */
     public PantallaSupervisor() {
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo.png")).getImage());
-        initComponents();
+        setResizable(false);
+        setExtendedState(PantallaSupervisor.NORMAL);
+        initComponents(); 
     }
 
     public PantallaSupervisor(Cliente cliente) {
@@ -65,7 +67,7 @@ public class PantallaSupervisor extends javax.swing.JFrame {
     private void InitContent() {
         /* mostrarJPanelAgendarHorarios();*/
     }
-    
+
     /*private void aplicarColoresBotones() {
         Color color = new Color(30, 45, 65);
         botonAgendarHorarios.setBackground(color);
@@ -75,7 +77,7 @@ public class PantallaSupervisor extends javax.swing.JFrame {
         botonSalir1.setBackground(color);
     }*/
 
-    /*
+ /*
     private void mostrarJPanelAgendarHorarios() {
         TablaAgendarHorarios panel = new TablaAgendarHorarios();
         cargarPanel(panel);

@@ -17,8 +17,9 @@ public class NewLogin extends javax.swing.JFrame {
      */
     public NewLogin() {
         setIconImage(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo.png")).getImage());
-        setResizable(false);
         initComponents();
+        setResizable(false);
+        setMaximizedBounds(null);
         this.noVer.setVisible(false);//Ocultar boton "ojo"
         configurarPlaceholders();
         validacion();
@@ -332,13 +333,13 @@ public class NewLogin extends javax.swing.JFrame {
                             "Ingreso Exitoso",
                             JOptionPane.INFORMATION_MESSAGE);
                     new PantallaSupervisor(cliente).setVisible(true);
-                } else if(rol.equalsIgnoreCase("ROLE_DUENO")){
+                } else if (rol.equalsIgnoreCase("ROLE_DUENO")) {
                     JOptionPane.showMessageDialog(this,
                             "Bienvenido Dueño: " + cliente.getNombreCliente(),
                             "Ingreso Exitoso",
                             JOptionPane.INFORMATION_MESSAGE);
                     new PantallaDueno(cliente).setVisible(true);
-                }else {
+                } else {
                     JOptionPane.showMessageDialog(this,
                             "Rol desconocido: " + rol,
                             "Error de rol",
@@ -368,7 +369,6 @@ public class NewLogin extends javax.swing.JFrame {
             this.dispose();
             return;
         }*/
-
         // ❌ Ninguna coincidencia
         JOptionPane.showMessageDialog(this,
                 "Credenciales incorrectas o usuario no registrado.",
