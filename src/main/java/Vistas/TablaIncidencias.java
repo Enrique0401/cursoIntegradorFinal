@@ -2,6 +2,7 @@ package Vistas;
 
 import Model.*;
 import Observer.*;
+import Model.Proyectos;
 import javax.swing.table.DefaultTableModel;
 import Repositorio.*;
 import Servicio.*;
@@ -13,7 +14,8 @@ import javax.swing.JOptionPane;
 public class TablaIncidencias extends javax.swing.JPanel implements Observador {
 
     private final DefaultTableModel modelo;
-    private final IIncidenciaService usuarioService = new IncidenciaService(new IncidenciaRepositorio());
+    private final IIncidenciaService incidenciaService = new IncidenciaService(new IncidenciaRepositorio());
+    private final IProyectoService proyectoService = new ProyectoService(new ProyectoRepositorio());
 
     public TablaIncidencias() {
         initComponents();
@@ -29,18 +31,20 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
 
     private void cargarIncidencias() {
         modelo.setRowCount(0);
-        List<Incidencia> lista = usuarioService.obtenerTodos();
+        List<Incidencia> lista = incidenciaService.obtenerTodos();
 
         for (Incidencia i : lista) {
+
+            // Traemos el proyecto usando el id
+            Proyectos p = proyectoService.buscarPorId(i.getIdProyecto());
+
             modelo.addRow(new Object[]{
                 i.getIdIncidencia(),
+                p != null ? p.getNombre() : "Sin proyecto",
                 i.getDescripcionIncidencia(),
-                
                 i.getFechaIncidencia() != null ? i.getFechaIncidencia().toLocalDate() : null,
-                i.getEstadoInIncidencia(),
-            });
+                i.getEstadoInIncidencia(),});
         }
-
     }
 
     //MÉTODOS REUTILIZABLES//
@@ -97,7 +101,7 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
         jLabel1 = new javax.swing.JLabel();
         botonRegresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        comboBoxProyectos = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
@@ -150,7 +154,7 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Filtrar por Proyecto:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxProyectos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1.setText("Nueva Incidencia");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +177,7 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
                 .addComponent(botonRegresar))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(comboBoxProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(jButton1))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -193,7 +197,7 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
                     .addComponent(botonRegresar))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBoxProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -228,8 +232,8 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonRegresar;
+    private javax.swing.JComboBox<String> comboBoxProyectos;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;

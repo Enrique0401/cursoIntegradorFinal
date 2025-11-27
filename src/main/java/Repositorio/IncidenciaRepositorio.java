@@ -20,7 +20,7 @@ public class IncidenciaRepositorio {
         INSERT INTO incidencia (
             descripcion, estado,
             fecha, proyecto_id
-        ) VALUES (?, ?, ?, ?, ?)
+        ) VALUES (?, ?, ?, ?)
         """;
 
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
