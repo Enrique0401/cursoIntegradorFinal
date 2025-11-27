@@ -1,94 +1,80 @@
 package Repositorio;
 
-import Builder.ClienteBuilder;
-import Model.Cliente;
+import Builder.IncidenciaBuilder;
+import Model.Incidencia;
 import ServiciosMoroniConexion.BaseDatosConexion;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClienteRepositorio {
+public class IncidenciaRepositorio {
 
     private final BaseDatosConexion conexionDB = BaseDatosConexion.getInstancia();
 
     // ================================
-    // REGISTRAR CLIENTE
+    // REGISTRAR INCIDENCIA
     // ================================
-    public boolean registrar(Cliente cliente) {
-        if (emailRegistrado(cliente.getEmailCliente()) || telefonoRegistrado(cliente.getTelefonoCliente())) {
-            System.err.println("⚠️ El email o teléfono ya está registrado.");
-            return false;
-        }
-
+    public boolean registrar(Incidencia incidencia) {
         String sql = """
-        INSERT INTO cliente (
-            nombre_cliente, ruc_cliente, direccion_cliente,
-            telefono_cliente, email_cliente, contrasena_cliente, rol
-        ) VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO incidencia (
+            descripcion, estado,
+            fecha, proyecto_id
+        ) VALUES (?, ?, ?, ?, ?)
         """;
 
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, cliente.getNombreCliente());
-            ps.setString(2, cliente.getRucCliente());
-            ps.setString(3, cliente.getDireccionCliente());
-            ps.setString(4, cliente.getTelefonoCliente());
-            ps.setString(5, cliente.getEmailCliente());
-            ps.setString(6, cliente.getContrasenaCliente());
-            ps.setString(7, cliente.getRol() != null ? cliente.getRol() : "ROL_USER");
-
+            ps.setString(1, incidencia.getDescripcionIncidencia());
+            ps.setString(2, incidencia.getEstadoInIncidencia());
+            ps.setTimestamp(3, Timestamp.valueOf(incidencia.getFechaIncidencia()));
+            ps.setInt(4, incidencia.getIdProyecto());
             ps.executeUpdate();
             return true;
 
         } catch (SQLException e) {
-            System.err.println("❌ Error al registrar cliente: " + e.getMessage());
+            System.err.println("❌ Error al registrar INCIDENCIA: " + e.getMessage());
             return false;
         }
     }
 
     // ================================
-    // ACTUALIZAR CLIENTE
+    // ACTUALIZAR INCIDENCIA
     // ================================
-    public boolean actualizar(Cliente cliente) {
+    public boolean actualizar(Incidencia incidencia) {
         String sql = """
         UPDATE cliente
-        SET nombre_cliente = ?, ruc_cliente = ?, direccion_cliente = ?,
-            telefono_cliente = ?, email_cliente = ?, contrasena_cliente = ?, rol = ?
+        SET descripcion = ?, estado = ?, fecha = ?, proyecto_id = ?
         WHERE id_cliente = ?
         """;
 
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            ps.setString(1, cliente.getNombreCliente());
-            ps.setString(2, cliente.getRucCliente());
-            ps.setString(3, cliente.getDireccionCliente());
-            ps.setString(4, cliente.getTelefonoCliente());
-            ps.setString(5, cliente.getEmailCliente());
-            ps.setString(6, cliente.getContrasenaCliente());
-            ps.setString(7, cliente.getRol());
-            ps.setInt(8, cliente.getIdCliente());
+            ps.setString(1, incidencia.getDescripcionIncidencia());
+            ps.setString(2, incidencia.getEstadoInIncidencia());
+            ps.setTimestamp(3, Timestamp.valueOf(incidencia.getFechaIncidencia()));
+            ps.setInt(4, incidencia.getIdProyecto());
 
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
-            System.err.println("❌ Error al actualizar cliente: " + e.getMessage());
+            System.err.println("❌ Error al actualizar INCIDENCIA: " + e.getMessage());
             return false;
         }
     }
 
     // ================================
-    // OBTENER CLIENTES
+    // OBTENER INCIDENCIA
     // ================================
-    public Cliente obtenerPorId(int id) {
-        String sql = "SELECT * FROM cliente WHERE id_cliente = ?";
+    public Incidencia obtenerPorId(int id) {
+        String sql = "SELECT * FROM incidencia WHERE id_incidencia = ?";
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
-                return construirClienteDesdeResultSet(rs);
+                return construirIncidenciaDesdeResultSet(rs);
             }
 
         } catch (SQLException e) {
@@ -97,31 +83,14 @@ public class ClienteRepositorio {
         return null;
     }
 
-    public Cliente obtenerPorEmail(String email) {
-        String sql = "SELECT * FROM cliente WHERE LOWER(email_cliente) = LOWER(?)";
-        try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
-
-            ps.setString(1, email.trim().toLowerCase());
-            ResultSet rs = ps.executeQuery();
-
-            if (rs.next()) {
-                return construirClienteDesdeResultSet(rs);
-            }
-
-        } catch (SQLException e) {
-            System.err.println("❌ Error al obtener cliente por email: " + e.getMessage());
-        }
-        return null;
-    }
-
-    public List<Cliente> obtenerTodos() {
-        List<Cliente> lista = new ArrayList<>();
-        String sql = "SELECT * FROM cliente ORDER BY id_cliente";
+    public List<Incidencia> obtenerTodos() {
+        List<Incidencia> lista = new ArrayList<>();
+        String sql = "SELECT * FROM incidencia ORDER BY id_incidencia";
 
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql); ResultSet rs = ps.executeQuery()) {
 
             while (rs.next()) {
-                lista.add(construirClienteDesdeResultSet(rs));
+                lista.add(construirIncidenciaDesdeResultSet(rs));
             }
 
         } catch (SQLException e) {
@@ -131,17 +100,17 @@ public class ClienteRepositorio {
     }
 
     // ================================
-    // ELIMINAR CLIENTE
+    // ELIMINAR INCIDENCIA
     // ================================
     public boolean eliminar(int id) {
-        String sql = "DELETE FROM cliente WHERE id_cliente = ?";
+        String sql = "DELETE FROM incidencia WHERE id_incidencia = ?";
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, id);
             return ps.executeUpdate() > 0;
 
         } catch (SQLException e) {
-            System.err.println("❌ Error al eliminar cliente: " + e.getMessage());
+            System.err.println("❌ Error al eliminar incidencia: " + e.getMessage());
             return false;
         }
     }
@@ -149,15 +118,6 @@ public class ClienteRepositorio {
     // ================================
     // VALIDACIONES
     // ================================
-    public boolean emailRegistrado(String email) {
-        String sql = "SELECT COUNT(*) FROM cliente WHERE LOWER(email_cliente) = LOWER(?)";
-        return verificarExistencia(sql, email);
-    }
-
-    public boolean telefonoRegistrado(String telefono) {
-        String sql = "SELECT COUNT(*) FROM cliente WHERE telefono_cliente = ?";
-        return verificarExistencia(sql, telefono);
-    }
 
     private boolean verificarExistencia(String sql, Object valor) {
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -173,22 +133,19 @@ public class ClienteRepositorio {
     }
 
     // ================================
-    // CONSTRUCTOR DE CLIENTE (desde BD)
+    // CONSTRUCTOR DE INCIDENCIA (desde BD)
     // ================================
-    private Cliente construirClienteDesdeResultSet(ResultSet rs) throws SQLException {
-        return new ClienteBuilder()
-                .conIdCliente(rs.getInt("id_cliente"))
-                .conNombreCliente(rs.getString("nombre_cliente"))
-                .conRucCliente(rs.getString("ruc_cliente"))
-                .conDireccionCliente(rs.getString("direccion_cliente"))
-                .conTelefonoCliente(rs.getString("telefono_cliente"))
-                .conEmailCliente(rs.getString("email_cliente"))
-                .conContrasenaCliente(rs.getString("contrasena_cliente"))
-                .conRol(rs.getString("rol"))
+    private Incidencia construirIncidenciaDesdeResultSet(ResultSet rs) throws SQLException {
+        return new IncidenciaBuilder()
+                .conIdIncidencia(rs.getInt("id_incidencia"))
+                .conDescripcionIncidencia(rs.getString("descripcion"))
+                .conEstadoIncidencia(rs.getString("estado"))
+                .conFechaIncidencia(rs.getTimestamp("fecha").toLocalDateTime())
+                .conIdProyecto(rs.getInt("proyecto_id"))
                 .build();
     }
 
-    public Cliente verPorEmail(String email) {
+    /*public Cliente verPorEmail(String email) {
         String sql = "SELECT * FROM Cliente WHERE LOWER(email_cliente) = LOWER(?)";
 
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
@@ -222,5 +179,5 @@ public class ClienteRepositorio {
             System.err.println("⚠️ Error al obtener cliente por email: " + e.getMessage());
         }
         return null;
-    }
+    }*/
 }

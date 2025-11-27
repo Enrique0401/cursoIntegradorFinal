@@ -2,110 +2,70 @@ package Model;
 
 import java.time.LocalDateTime;
 
-public class Cliente {
+public class Incidencia {
 
-    private int idCliente;
-    private String nombreCliente;
-    private String rucCliente;
-    private String direccionCliente;
-    private String telefonoCliente;
-    private String emailCliente;
-    private String contrasenaCliente;
-    private String rol;
-    private LocalDateTime fechaRegistro;
+    private int idIncidencia;
+    private String descripcionIncidencia;
+    private String estadoInIncidencia;
+    private LocalDateTime fechaIncidencia;
+    private int idProyecto;
 
     // 🔹 Constructor vacío
-    public Cliente() {
+    public Incidencia() {
     }
 
-    // 🔹 Constructor con parámetros
-    public Cliente(String nombreCliente, String rucCliente, String direccionCliente,
-            String telefonoCliente, String emailCliente, String contrasenaCliente, String rol) {
-        this.nombreCliente = nombreCliente;
-        this.rucCliente = rucCliente;
-        this.direccionCliente = direccionCliente;
-        this.telefonoCliente = telefonoCliente;
-        this.emailCliente = emailCliente;
-        this.contrasenaCliente = contrasenaCliente;
-        this.rol = rol;
-        this.fechaRegistro = LocalDateTime.now();
+    public Incidencia(int idIncidencia, String descripcionIncidencia, String estadoInIncidencia, LocalDateTime fechaIncidencia, int idProyecto) {
+        this.idIncidencia = idIncidencia;
+        this.descripcionIncidencia = descripcionIncidencia;
+        this.estadoInIncidencia = estadoInIncidencia;
+        this.fechaIncidencia = fechaIncidencia;
+        this.idProyecto = idProyecto;
     }
 
-    // 🔹 Getters y Setters
-    public int getIdCliente() {
-        return idCliente;
+    public int getIdIncidencia() {
+        return idIncidencia;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdIncidencia(int idIncidencia) {
+        this.idIncidencia = idIncidencia;
     }
 
-    public String getNombreCliente() {
-        return nombreCliente;
+    public String getDescripcionIncidencia() {
+        return descripcionIncidencia;
     }
 
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
+    public void setDescripcionIncidencia(String descripcionIncidencia) {
+        this.descripcionIncidencia = descripcionIncidencia;
     }
 
-    public String getRucCliente() {
-        return rucCliente;
+    public String getEstadoInIncidencia() {
+        return estadoInIncidencia;
     }
 
-    public void setRucCliente(String rucCliente) {
-        this.rucCliente = rucCliente;
+    public void setEstadoInIncidencia(String estadoInIncidencia) {
+        this.estadoInIncidencia = estadoInIncidencia;
     }
 
-    public String getDireccionCliente() {
-        return direccionCliente;
+    public LocalDateTime getFechaIncidencia() {
+        return fechaIncidencia;
     }
 
-    public void setDireccionCliente(String direccionCliente) {
-        this.direccionCliente = direccionCliente;
+    public void setFechaIncidencia(LocalDateTime fechaIncidencia) {
+        this.fechaIncidencia = fechaIncidencia;
     }
 
-    public String getTelefonoCliente() {
-        return telefonoCliente;
+    public int getIdProyecto() {
+        return idProyecto;
     }
 
-    public void setTelefonoCliente(String telefonoCliente) {
-        this.telefonoCliente = telefonoCliente;
+    public void setIdProyecto(int idProyecto) {
+        this.idProyecto = idProyecto;
     }
 
-    public String getEmailCliente() {
-        return emailCliente;
-    }
-
-    public void setEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
-    }
-
-    public String getContrasenaCliente() {
-        return contrasenaCliente;
-    }
-
-    public void setContrasenaCliente(String contrasenaCliente) {
-        this.contrasenaCliente = contrasenaCliente;
-    }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-    public LocalDateTime getFechaRegistro() {
-        return fechaRegistro;
-    }
-
-    public void setFechaRegistro(LocalDateTime fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
+    
 
     // 🔹 Método para mostrar información
     public String mostrarInfo() {
-        return String.format("Cliente: %s (%s) - Rol: %s", nombreCliente, emailCliente, rol);
+        return String.format("Incidencia: %s (%s) - Rol: %s", idIncidencia, descripcionIncidencia);
     }
 }

@@ -13,38 +13,34 @@ import javax.swing.JOptionPane;
 public class TablaIncidencias extends javax.swing.JPanel implements Observador {
 
     private final DefaultTableModel modelo;
-    private final IClienteService usuarioService = new ClienteService(new ClienteRepositorio());
+    private final IIncidenciaService usuarioService = new IncidenciaService(new IncidenciaRepositorio());
 
     public TablaIncidencias() {
         initComponents();
         modelo = (DefaultTableModel) tablaUsuario.getModel();
         EntidadObservableSingleton.getInstancia().agregarObservador(this);
-        cargarUsuarios();
+        cargarIncidencias();
     }
 
     @Override
     public void actualizar() {
-        cargarUsuarios();
+        cargarIncidencias();
     }
 
-    private void cargarUsuarios() {
+    private void cargarIncidencias() {
         modelo.setRowCount(0);
-        List<Cliente> lista = usuarioService.obtenerTodos();
+        List<Incidencia> lista = usuarioService.obtenerTodos();
 
-        for (Cliente u : lista) {
-            if (u.getRol() != null && u.getRol().equalsIgnoreCase("ROLE_USER")) {
-                modelo.addRow(new Object[]{
-                    u.getIdCliente(),
-                    u.getNombreCliente(),
-                    u.getRucCliente(),
-                    u.getEmailCliente(),
-                    u.getTelefonoCliente(),
-                    u.getDireccionCliente(),
-                    u.getRol(),
-                    u.getFechaRegistro() != null ? u.getFechaRegistro().toLocalDate() : null
-                });
-            }
+        for (Incidencia i : lista) {
+            modelo.addRow(new Object[]{
+                i.getIdIncidencia(),
+                i.getDescripcionIncidencia(),
+                
+                i.getFechaIncidencia() != null ? i.getFechaIncidencia().toLocalDate() : null,
+                i.getEstadoInIncidencia(),
+            });
         }
+
     }
 
     //MÉTODOS REUTILIZABLES//
@@ -214,7 +210,6 @@ public class TablaIncidencias extends javax.swing.JPanel implements Observador {
             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
 
 //----------------------------Llena los campos -----------------------------------
     private void botonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegresarActionPerformed

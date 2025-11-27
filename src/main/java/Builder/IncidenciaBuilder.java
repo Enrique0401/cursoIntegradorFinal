@@ -1,78 +1,51 @@
 package Builder;
 
-import Model.Cliente;
+import Model.Incidencia;
 import java.time.LocalDateTime;
 
-public class ClienteBuilder {
+public class IncidenciaBuilder {
 
-    private int idCliente;
-    private String nombreCliente;
-    private String rucCliente;
-    private String direccionCliente;
-    private String telefonoCliente;
-    private String emailCliente;
-    private String contrasenaCliente;
-    private String rol;
-    private LocalDateTime fechaRegistro;
+    private int idIncidencia;
+    private String descripcionIncidencia;
+    private String estadoIncidencia;
+    private LocalDateTime fechaIncidencia;
+    private int idProyecto;
+
 
     // 🔹 Métodos tipo "con" para asignar valores
-    public ClienteBuilder conIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public IncidenciaBuilder conIdIncidencia(int idIncidencia) {
+        this.idIncidencia = idIncidencia;
         return this;
     }
 
-    public ClienteBuilder conNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
+    public IncidenciaBuilder conDescripcionIncidencia(String descripcionIncidencia) {
+        this.descripcionIncidencia = descripcionIncidencia;
         return this;
     }
 
-    public ClienteBuilder conRucCliente(String rucCliente) {
-        this.rucCliente = rucCliente;
+    public IncidenciaBuilder conEstadoIncidencia(String estadoIncidencia) {
+        this.estadoIncidencia = estadoIncidencia;
         return this;
     }
 
-    public ClienteBuilder conDireccionCliente(String direccionCliente) {
-        this.direccionCliente = direccionCliente;
+    public IncidenciaBuilder conFechaIncidencia(LocalDateTime fechaIncidencia) {
+        this.fechaIncidencia = fechaIncidencia;
         return this;
     }
-
-    public ClienteBuilder conTelefonoCliente(String telefonoCliente) {
-        this.telefonoCliente = telefonoCliente;
-        return this;
-    }
-
-    public ClienteBuilder conEmailCliente(String emailCliente) {
-        this.emailCliente = emailCliente;
-        return this;
-    }
-
-    public ClienteBuilder conContrasenaCliente(String contrasenaCliente) {
-        this.contrasenaCliente = contrasenaCliente;
-        return this;
-    }
-
-    public ClienteBuilder conRol(String rol) {
-        this.rol = rol;
-        return this;
-    }
-
-    public ClienteBuilder conFechaRegistro(LocalDateTime fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
+    
+    public IncidenciaBuilder conIdProyecto(int idProyecto) {
+        this.idProyecto = idProyecto;
         return this;
     }
 
     // 🔹 Método final para construir el objeto
-    public Cliente build() {
-        Cliente cliente = new Cliente();
-        cliente.setIdCliente(idCliente);
-        cliente.setNombreCliente(nombreCliente);
-        cliente.setRucCliente(rucCliente);
-        cliente.setDireccionCliente(direccionCliente);
-        cliente.setTelefonoCliente(telefonoCliente);
-        cliente.setEmailCliente(emailCliente);
-        cliente.setContrasenaCliente(contrasenaCliente);
-        cliente.setRol(rol);
-        cliente.setFechaRegistro(fechaRegistro != null ? fechaRegistro : LocalDateTime.now());
-        return cliente;
+    public Incidencia build() {
+        Incidencia incidencia = new Incidencia();
+        incidencia.setIdIncidencia(idIncidencia);
+        incidencia.setDescripcionIncidencia(descripcionIncidencia);
+        incidencia.setEstadoInIncidencia(estadoIncidencia);
+        incidencia.setFechaIncidencia(fechaIncidencia != null ? fechaIncidencia : LocalDateTime.now());
+        incidencia.setIdProyecto(idProyecto);
+        return incidencia;
     }
 }

@@ -1,27 +1,27 @@
 package Servicio;
 
-import Model.Cliente;
+import Model.Incidencia;
 import Observer.EntidadObservableSingleton;
-import Repositorio.ClienteRepositorio;
+import Repositorio.IncidenciaRepositorio;
 
 import javax.swing.JOptionPane;
 import java.util.List;
 
-public class ClienteService implements IClienteService {
+public class IncidenciaService implements IIncidenciaService {
 
-    private final ClienteRepositorio repositorio;
+    private final IncidenciaRepositorio repositorio;
 
-    public ClienteService(ClienteRepositorio repositorio) {
+    public IncidenciaService(IncidenciaRepositorio repositorio) {
         this.repositorio = repositorio;
     }
 
     @Override
-    public List<Cliente> obtenerTodos() {
+    public List<Incidencia> obtenerTodos() {
         return repositorio.obtenerTodos();
     }
 
     @Override
-    public Cliente buscarPorId(int id) {
+    public Incidencia buscarPorId(int id) {
         return repositorio.obtenerPorId(id);
     }
 
@@ -38,32 +38,28 @@ public class ClienteService implements IClienteService {
     }
 
     @Override
-    public boolean actualizar(Cliente cliente) {
-        if (!validarAntesDeActualizar(cliente)) {
-            return false;
-        }
-
-        boolean exito = repositorio.actualizar(cliente);
+    public boolean actualizar(Incidencia incidencia) {
+        boolean exito = repositorio.actualizar(incidencia);
         if (exito) {
-            JOptionPane.showMessageDialog(null, "✅ Cliente actualizado correctamente.");
+            JOptionPane.showMessageDialog(null, "✅ Incidencia actualizado correctamente.");
             EntidadObservableSingleton.getInstancia().notificarObservadores();
         } else {
-            JOptionPane.showMessageDialog(null, "❌ No se pudo actualizar el cliente.");
+            JOptionPane.showMessageDialog(null, "❌ No se pudo actualizar el incidencia.");
         }
         return exito;
     }
 
     @Override
-    public boolean registrar(Cliente cliente) {
-        if (!validarAntesDeRegistrar(cliente)) {
-            return false;
-        }
+    public boolean registrar(Incidencia incidencia) {
+//        if (!validarAntesDeRegistrar(incidencia)) {
+//            return false;
+//        }
 
-        boolean fueExitoso = repositorio.registrar(cliente);
+        boolean fueExitoso = repositorio.registrar(incidencia);
         if (fueExitoso) {
             EntidadObservableSingleton.getInstancia().notificarObservadores();
         } else {
-            JOptionPane.showMessageDialog(null, "❌ No se pudo registrar el cliente en la base de datos.");
+            JOptionPane.showMessageDialog(null, "❌ No se pudo registrar el incidencia en la base de datos.");
         }
         return fueExitoso;
     }
@@ -71,35 +67,25 @@ public class ClienteService implements IClienteService {
     // ============================================================
     // 🔍 VALIDACIONES DE NEGOCIO
     // ============================================================
-    private boolean validarAntesDeRegistrar(Cliente cliente) {
-        if (!validarCampos(cliente)) {
+    /*private boolean validarAntesDeRegistrar(Incidencia incidencia) {
+        if (!validarCampos(incidencia)) {
             return false;
         }
-
-        if (repositorio.emailRegistrado(cliente.getEmailCliente())) {
-            JOptionPane.showMessageDialog(null, "❌ El correo ya está registrado.");
-            return false;
-        }
-
-        if (repositorio.telefonoRegistrado(cliente.getTelefonoCliente())) {
-            JOptionPane.showMessageDialog(null, "❌ El teléfono ya está registrado.");
-            return false;
-        }
-
+        
         return true;
     }
 
-    private boolean validarAntesDeActualizar(Cliente cliente) {
-        if (!validarCampos(cliente)) {
+    private boolean validarAntesDeActualizar(Incidencia incidencia) {
+        if (!validarCampos(incidencia)) {
             return false;
         }
 
-        int id = cliente.getIdCliente();
+        int id = incidencia.getIdIncidencia();
 
-        /* Nota: tus métodos emailRegistrado/telefonoRegistrado buscan existencia global.
-           Si quieres permitir que el cliente mantenga su mismo email/telefono, deberías
-           implementar métodos que excluyan su propio id (ej. existeEmail(email, id)).
-           Por ahora validamos de forma simple: si existe y no pertenece al mismo id -> error. */
+//        Nota: tus métodos emailRegistrado/telefonoRegistrado buscan existencia global.
+//           Si quieres permitir que el cliente mantenga su mismo email/telefono, deberías
+//           implementar métodos que excluyan su propio id (ej. existeEmail(email, id)).
+//           Por ahora validamos de forma simple: si existe y no pertenece al mismo id -> error.
         Cliente porEmail = repositorio.obtenerPorEmail(cliente.getEmailCliente());
         if (porEmail != null && porEmail.getIdCliente() != id) {
             JOptionPane.showMessageDialog(null, "❌ El correo ya está en uso por otro cliente.");
@@ -121,9 +107,9 @@ public class ClienteService implements IClienteService {
         }
 
         return true;
-    }
+    }*/
 
-    private boolean validarCampos(Cliente cliente) {
+    /*private boolean validarCampos(Incidencia incidencia) {
         if (cliente.getNombreCliente() == null || cliente.getNombreCliente().isEmpty()
                 || cliente.getEmailCliente() == null || cliente.getEmailCliente().isEmpty()
                 || cliente.getContrasenaCliente() == null || cliente.getContrasenaCliente().isEmpty()) {
@@ -149,12 +135,12 @@ public class ClienteService implements IClienteService {
         }
 
         return true;
-    }
+    }*/
 
     // ============================================================
     // 🔐 ELIMINAR CON CONFIRMACIÓN Y VALIDACIÓN DE CREDENCIALES
     // ============================================================
-    public boolean eliminarConConfirmacion(int id, String contrasena) {
+    /*public boolean eliminarConConfirmacion(int id, String contrasena) {
         Cliente cli = repositorio.obtenerPorId(id);
         if (cli == null) {
             JOptionPane.showMessageDialog(null, "❌ Cliente no encontrado.");
@@ -187,5 +173,5 @@ public class ClienteService implements IClienteService {
         }
 
         return eliminado;
-    }
+    }*/
 }

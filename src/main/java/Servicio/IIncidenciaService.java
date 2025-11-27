@@ -1,17 +1,17 @@
 package Servicio;
 
-import Model.Cliente;
+import Model.Incidencia;
 import java.util.List;
 
-public interface IClienteService {
+public interface IIncidenciaService {
 
-    List<Cliente> obtenerTodos();
+    List<Incidencia> obtenerTodos();
 
-    Cliente buscarPorId(int id);
+    Incidencia buscarPorId(int id);
 
-    boolean eliminar(int idCliente);
+    boolean eliminar(int idIncidencia);
 
-    boolean actualizar(Cliente cliente);
+    boolean actualizar(Incidencia incidencia);
 
-    boolean registrar(Cliente cliente);
+    boolean registrar(Incidencia incidencia);
 }
