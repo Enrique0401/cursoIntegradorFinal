@@ -223,7 +223,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/actualizarDatos.png"/>
+                  <Image iconType="3" name="/Imagenes/tubo-de-pegamento (1).gif"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Incidencias"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -404,7 +404,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/billetes.png"/>
+                  <Image iconType="3" name="/Imagenes/bajo-construccion.gif"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Seguimientos"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

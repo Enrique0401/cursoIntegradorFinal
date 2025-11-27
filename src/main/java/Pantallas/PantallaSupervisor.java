@@ -146,7 +146,7 @@ public class PantallaSupervisor extends javax.swing.JFrame {
         botonActualizarDatos.setBackground(new java.awt.Color(195, 18, 1));
         botonActualizarDatos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botonActualizarDatos.setForeground(new java.awt.Color(255, 255, 255));
-        botonActualizarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/actualizarDatos.png"))); // NOI18N
+        botonActualizarDatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tubo-de-pegamento (1).gif"))); // NOI18N
         botonActualizarDatos.setText("Incidencias");
         botonActualizarDatos.setBorder(null);
         botonActualizarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -269,7 +269,7 @@ public class PantallaSupervisor extends javax.swing.JFrame {
         botonActualizarDatos1.setBackground(new java.awt.Color(195, 18, 1));
         botonActualizarDatos1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         botonActualizarDatos1.setForeground(new java.awt.Color(255, 255, 255));
-        botonActualizarDatos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/billetes.png"))); // NOI18N
+        botonActualizarDatos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bajo-construccion.gif"))); // NOI18N
         botonActualizarDatos1.setText("Seguimientos");
         botonActualizarDatos1.setBorder(null);
         botonActualizarDatos1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

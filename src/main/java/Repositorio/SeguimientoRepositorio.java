@@ -1,6 +1,5 @@
 package Repositorio;
 
-import Builder.ClienteBuilder;
 import Builder.SeguimientoBuilder;
 import Model.Seguimiento;
 import ServiciosMoroniConexion.BaseDatosConexion;
@@ -27,9 +26,9 @@ public class SeguimientoRepositorio {
 
         try (Connection conn = conexionDB.establecerConexion(); PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, seguimiento.getDescripcion());
-            ps.setInt(2, seguimiento.getPorcentajeAvance());
-            ps.setInt(3, seguimiento.getIdProyecto());
-            ps.setTimestamp(4, Timestamp.valueOf(seguimiento.getFechaAvance()));
+            ps.setTimestamp(2, Timestamp.valueOf(seguimiento.getFechaAvance()));
+            ps.setInt(3, seguimiento.getPorcentajeAvance());
+            ps.setInt(4, seguimiento.getIdProyecto());
 
             ps.executeUpdate();
             return true;
